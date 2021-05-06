@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+  <title>Zsanna's Restaurant</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2, h3 {
+  text-align: center;
+  color: #bbbbbb;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://images.immediate.co.uk/production/volatile/sites/2/2016/10/26182.jpg?quality=90&resize=768%2C574");
+}
+.second{
+  background-image: url("https://www.recipetineats.com/wp-content/uploads/2016/10/Mushroom-Pasta_6-SQ.jpg");
+}
+.dessert{
+  background-image: url("https://realfood.tesco.com/media/images/RFO-1400x919-Tiramisu-d9ad0d90-7957-4e4b-9402-36c6474ac8ec-0-1400x919.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2, h3 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 200px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 100px;
+  }
+
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Zsanna's </h1>
+<h2>Restaurant in Maidenhead </h2>
+<h3>A little Piece of Italy </h3>
+<div class="first">
+  <p>Smoky sausage and kale pizza<span class="price">$14</span><br />
+  <small>kale woody stems discarded, pork sausages, smoked paprika, garlic, taleggio, mozzarella, chilli flakes  </small></p>
+</div>
+
+<div class="second">
+  <p>Mushroom Pasta<span class="price">$18</span><br />
+  <small>mushrooms, cloves garlic, olive, freshly grated parmesan cheese, unsalted butter, olive oil,  pepper.</small></p>
+</div>
+
+<div class="dessert">
+  <p>Mini roll tiramisu <span class="price">$8</span><br />
+  <small>strong coffee, mascarpone, double cream,  vanilla extract, rolls, dark chocolate,  dusting with cocoa powder.
+  </small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
